@@ -1,21 +1,19 @@
-﻿//1. Crie um programa que leia dois números inteiros do usuário e exiba a
-//soma, subtração, multiplicação e divisão desses números.
+﻿//2. Desenvolva um programa que calcule a área de um círculo, solicitando
+//ao usuário o valor do raio.
 
 using System;
 
-class Calculator 
+class Raio 
 {
     static void Main()
     {
-        Console.WriteLine("\n ------Calculadora------");
-        Console.WriteLine("Insira o 1° numero: ");
-        int num1 = Convert.ToUInt16(Console.ReadLine());
-        Console.WriteLine("Insira o 2° numero: ");
-        int num2 = Convert.ToUInt16(Console.ReadLine());
+        Console.WriteLine("---Área de um circulo---");
+        Console.WriteLine("Digite a área do circulo: ");
+        double raio = Convert.ToDouble(Console.ReadLine());
+        
+        double area = Math.PI * Math.Pow(raio, 2);
 
-        Console.WriteLine($"\nA soma de {num1} e {num2} é: " + (num1 + num2));
-        Console.WriteLine($"\nA subtração de {num1} e {num2} é: " + (num1 - num2));
-        Console.WriteLine($"\nA multiplicação de {num1} e {num2} é: " + (num1 * num2));
-        Console.WriteLine($"\nA divisão de {num1} e {num2} é: " + (num1 / num2));
+        Console.WriteLine("A área do circulo é: " + area);
     }
+
 }
